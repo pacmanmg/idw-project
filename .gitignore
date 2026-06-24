@@ -1,0 +1,6 @@
+# Dependências do Node
+app/node_modules/
+
+# Arquivos locais de dados do MySQL (gerados pelo volume do Docker)
+.data/
+mysql_data/
