@@ -71,6 +71,7 @@ app.post('/usuarios', async (req, res) => {
   }
 });
 
+// Rotas protegidas (necessitam de token) 
 app.get('/usuarios', verificarToken, (req, res) => {
   db.query('SELECT id, nome, email, criado_em FROM usuarios', (err, results) => {
     if (err) return res.status(500).json({ error: err.message });
